@@ -4,6 +4,7 @@ node_modules
 # django
 static/js/
 *.sqlite3
+*.pyc
 
 #bower
 src/components/js/
