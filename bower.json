@@ -1,0 +1,25 @@
+{
+  "name": "dummy",
+  "version": "0.0.0",
+  "authors": [
+    "Gabriel Aguilar <gaguilar@mediainteractiva.net>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "moduleType": [
+    "es6",
+    "globals",
+    "node"
+  ],
+  "devDependencies": {
+    "backbone": "~1.2.1",
+    "jquery": "~2.1.4",
+    "react": "~0.13.3"
+  }
+}

@@ -1,0 +1,1 @@
+module.exports = ['react', 'superagent', 'firebase', 'react-router', 'classNames', 'lodash']
