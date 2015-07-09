@@ -1,11 +1,13 @@
 import React from 'react';
 import Row from './Row';
+import _ from 'lodash';
 
 class Table extends React.Component{
   render() {
     let thead = (
       <thead>
       <tr>
+        <th></th>
         <th>Title</th>
         <th>Publisher</th>
         <th>Authors</th>
@@ -16,9 +18,16 @@ class Table extends React.Component{
       </thead>
     );
 
+    var colors = {};
+    _.each(this.props.menu, (obj) => {
+      colors[obj.name] = obj.color;
+    });
+
     let tbody = (
       <tbody>
-        {this.props.data.map((item) => <Row data={item} key={item.id}/>)}
+        {this.props.data.map((item) => {
+          return <Row data={item} key={item.id} colors={colors}/>
+        })}
       </tbody>
     );
 

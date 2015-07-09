@@ -6,13 +6,13 @@ class LateralMenu extends React.Component {
 	render() {
 		let current = this.props.current;
 		let menu = this.props.menu.map((obj) => {
-			let url = `/inbox/${obj}`;
-			let klass = classNames({active: current == obj});
+			let url = `/inbox/${obj.name}`;
+			let klass = classNames({active: current == obj.name});
 			return (
-				<li className={klass} key={obj}>
+				<li className={klass} key={obj.name}>
 					<Link to={url} style={{'borderRadius': 0}}>
-						<i className="fa fa-fw fa-inbox"></i>
-						{obj}
+						<i className={classNames('fa', 'fa-fw', obj.icon)} style={{color: obj.color}}></i>
+						{obj.tag}
 					</Link>
 				</li>
 			)

@@ -2,7 +2,7 @@ import React from 'react'
 import HeaderBar from './HeaderBar';
 import Table from './Table';
 import _ from 'lodash'
-let MyFirebase = require("./MyFirebase");
+var MyFirebase = require("../utils/MyFirebase");
 let firebase = MyFirebase
 
 class FilterableTable extends React.Component {
@@ -95,7 +95,7 @@ class FilterableTable extends React.Component {
     this.getDataFiltered();
     var table = <i className="fa fa-spinner"></i>;
       if (! this.state.isLoading){
-        table = <Table data={this.getDataFiltered()} />;
+        table = <Table data={this.getDataFiltered()} menu={this.props.menu} />;
       }
 
       return (
